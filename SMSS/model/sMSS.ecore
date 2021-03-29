@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sMSS" nsURI="http://www.example.org/sMSS" nsPrefix="sMSS">
+  <eClassifiers xsi:type="ecore:EClass" name="SMSS">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageTypes" upperBound="-1"
+        eType="#//MessageType" containment="true" eOpposite="#//MessageType/smss"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Object" containment="true" eOpposite="#//Object/smss"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classes" upperBound="-1"
+        eType="#//Class" containment="true" eOpposite="#//Class/smss"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//Method"
+        containment="true" eOpposite="#//Method/smss"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//Method"
+        eOpposite="#//Method/class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//Object" eOpposite="#//Object/type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="smss" lowerBound="1" eType="#//SMSS"
+        eOpposite="#//SMSS/classes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Element" containment="true" eOpposite="#//Element/method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"
+        eOpposite="#//Class/method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="smss" lowerBound="1" eType="#//SMSS"
+        eOpposite="#//SMSS/method"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageType" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+        eType="#//Object" eOpposite="#//Object/sent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        eType="#//Object" eOpposite="#//Object/received"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+        eType="#//Message" eOpposite="#//Message/type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="smss" lowerBound="1" eType="#//SMSS"
+        eOpposite="#//SMSS/messageTypes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//MessageType"
+        eOpposite="#//MessageType/messages"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operand" eType="#//Operand"
+        eOpposite="#//Operand/messages"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//Method"
+        eOpposite="#//Method/elements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fragment" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operands" upperBound="-1"
+        eType="#//Operand" containment="true" eOpposite="#//Operand/fragment"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//FragmentType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operand">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+        eType="#//Message" containment="true" eOpposite="#//Message/operand"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fragment" lowerBound="1"
+        eType="#//Fragment" eOpposite="#//Fragment/operands"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sent" upperBound="-1" eType="#//MessageType"
+        eOpposite="#//MessageType/sender"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="received" upperBound="-1"
+        eType="#//MessageType" eOpposite="#//MessageType/receiver"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Class"
+        eOpposite="#//Class/objects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="smss" lowerBound="1" eType="#//SMSS"
+        eOpposite="#//SMSS/objects"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FragmentType">
+    <eLiterals name="ALT"/>
+    <eLiterals name="PAR" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

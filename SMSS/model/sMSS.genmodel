@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/SMSS/src-gen" creationIcons="false" editDirectory="/SMSS.edit/src-gen"
+    editorDirectory="/SMSS.editor/src-gen" modelPluginID="SMSS" modelName="SMSS" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>sMSS.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="SMSS" disposableProviderFactory="true" ecorePackage="sMSS.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sMSS.ecore#//FragmentType">
+      <genEnumLiterals ecoreEnumLiteral="sMSS.ecore#//FragmentType/ALT"/>
+      <genEnumLiterals ecoreEnumLiteral="sMSS.ecore#//FragmentType/PAR"/>
+    </genEnums>
+    <genClasses ecoreClass="sMSS.ecore#//SMSS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sMSS.ecore#//SMSS/messageTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sMSS.ecore#//SMSS/objects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sMSS.ecore#//SMSS/classes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sMSS.ecore#//SMSS/method"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//Class">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Class/method"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Class/objects"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Class/smss"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//Method">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sMSS.ecore#//Method/elements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Method/class"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Method/smss"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//MessageType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//MessageType/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//MessageType/receiver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//MessageType/messages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//MessageType/smss"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//Message">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Message/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Message/operand"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//Element">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Element/method"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//Fragment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sMSS.ecore#//Fragment/operands"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sMSS.ecore#//Fragment/type"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//Operand">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sMSS.ecore#//Operand/messages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sMSS.ecore#//Operand/condition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Operand/fragment"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//Object">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Object/sent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Object/received"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Object/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sMSS.ecore#//Object/smss"/>
+    </genClasses>
+    <genClasses ecoreClass="sMSS.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sMSS.ecore#//NamedElement/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

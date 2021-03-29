@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sMSS:SMSS xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sMSS="http://www.example.org/sMSS" xmi:id="_T235wG7cEeuLf_2pkx4LSA">
+  <messageTypes xmi:id="_T235wW7cEeuLf_2pkx4LSA" name="message1" sender="_T235xW7cEeuLf_2pkx4LSA" receiver="_T235x27cEeuLf_2pkx4LSA" messages="_T235zm7cEeuLf_2pkx4LSA _T2351W7cEeuLf_2pkx4LSA"/>
+  <messageTypes xmi:id="_T235wm7cEeuLf_2pkx4LSA" name="message2" sender="_T235xW7cEeuLf_2pkx4LSA" receiver="_T235xm7cEeuLf_2pkx4LSA" messages="_T235z27cEeuLf_2pkx4LSA _T2350m7cEeuLf_2pkx4LSA"/>
+  <messageTypes xmi:id="_T235w27cEeuLf_2pkx4LSA" name="message3" sender="_T235xW7cEeuLf_2pkx4LSA" receiver="_T235x27cEeuLf_2pkx4LSA" messages="_T235127cEeuLf_2pkx4LSA _T2352G7cEeuLf_2pkx4LSA"/>
+  <messageTypes xmi:id="_T235xG7cEeuLf_2pkx4LSA" name="message4" sender="_T235xW7cEeuLf_2pkx4LSA" receiver="_T235yG7cEeuLf_2pkx4LSA" messages="_T235027cEeuLf_2pkx4LSA _T2352W7cEeuLf_2pkx4LSA"/>
+  <objects xmi:id="_T235xW7cEeuLf_2pkx4LSA" name="mySenderObject" sent="_T235wW7cEeuLf_2pkx4LSA _T235wm7cEeuLf_2pkx4LSA _T235w27cEeuLf_2pkx4LSA _T235xG7cEeuLf_2pkx4LSA" type="_T235yW7cEeuLf_2pkx4LSA"/>
+  <objects xmi:id="_T235xm7cEeuLf_2pkx4LSA" name="myReceiverObject1" received="_T235wm7cEeuLf_2pkx4LSA" type="_T235ym7cEeuLf_2pkx4LSA"/>
+  <objects xmi:id="_T235x27cEeuLf_2pkx4LSA" name="myReceiverObject2" received="_T235wW7cEeuLf_2pkx4LSA _T235w27cEeuLf_2pkx4LSA" type="_T235y27cEeuLf_2pkx4LSA"/>
+  <objects xmi:id="_T235yG7cEeuLf_2pkx4LSA" name="myReceiverObject3" received="_T235xG7cEeuLf_2pkx4LSA" type="_T235zG7cEeuLf_2pkx4LSA"/>
+  <classes xmi:id="_T235yW7cEeuLf_2pkx4LSA" name="MyClass" method="_T235zW7cEeuLf_2pkx4LSA" objects="_T235xW7cEeuLf_2pkx4LSA"/>
+  <classes xmi:id="_T235ym7cEeuLf_2pkx4LSA" name="MyClass1" objects="_T235xm7cEeuLf_2pkx4LSA"/>
+  <classes xmi:id="_T235y27cEeuLf_2pkx4LSA" name="MyClass2" objects="_T235x27cEeuLf_2pkx4LSA"/>
+  <classes xmi:id="_T235zG7cEeuLf_2pkx4LSA" name="MyClass3" objects="_T235yG7cEeuLf_2pkx4LSA"/>
+  <method xmi:id="_T235zW7cEeuLf_2pkx4LSA" name="myMethod" class="_T235yW7cEeuLf_2pkx4LSA">
+    <elements xsi:type="sMSS:Message" xmi:id="_T235zm7cEeuLf_2pkx4LSA" type="_T235wW7cEeuLf_2pkx4LSA"/>
+    <elements xsi:type="sMSS:Message" xmi:id="_T235z27cEeuLf_2pkx4LSA" type="_T235wm7cEeuLf_2pkx4LSA"/>
+    <elements xsi:type="sMSS:Fragment" xmi:id="_T2350G7cEeuLf_2pkx4LSA">
+      <operands xmi:id="_T2350W7cEeuLf_2pkx4LSA" condition="myCondition1">
+        <messages xmi:id="_T2350m7cEeuLf_2pkx4LSA" type="_T235wm7cEeuLf_2pkx4LSA"/>
+        <messages xmi:id="_T235027cEeuLf_2pkx4LSA" type="_T235xG7cEeuLf_2pkx4LSA"/>
+      </operands>
+      <operands xmi:id="_T2351G7cEeuLf_2pkx4LSA" condition="myCondition2">
+        <messages xmi:id="_T2351W7cEeuLf_2pkx4LSA" type="_T235wW7cEeuLf_2pkx4LSA"/>
+      </operands>
+      <operands xmi:id="_T2351m7cEeuLf_2pkx4LSA" condition="myCondition3">
+        <messages xmi:id="_T235127cEeuLf_2pkx4LSA" type="_T235w27cEeuLf_2pkx4LSA"/>
+      </operands>
+    </elements>
+    <elements xsi:type="sMSS:Message" xmi:id="_T2352G7cEeuLf_2pkx4LSA" type="_T235w27cEeuLf_2pkx4LSA"/>
+    <elements xsi:type="sMSS:Message" xmi:id="_T2352W7cEeuLf_2pkx4LSA" type="_T235xG7cEeuLf_2pkx4LSA"/>
+  </method>
+</sMSS:SMSS>

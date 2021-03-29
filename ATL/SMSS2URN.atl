@@ -1,0 +1,6 @@
+-- @path URN=/seg.jUCMNav/src/seg/jUCMNav/emf/urn.ecore
+-- @path SMSS=/SMSS/model/sMSS.ecore
+
+module SMSS2URN;
+create OUT : URN from IN : SMSS;
+

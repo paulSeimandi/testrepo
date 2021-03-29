@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sMSS:SMSS xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sMSS="http://www.example.org/sMSS" xmi:id="_T3_UEG7cEeuLf_2pkx4LSA">
+  <messageTypes xmi:id="_T3_UEW7cEeuLf_2pkx4LSA" name="message1" sender="_T3_UFW7cEeuLf_2pkx4LSA" receiver="_T3_UFm7cEeuLf_2pkx4LSA" messages="_T3_7Im7cEeuLf_2pkx4LSA _T3_7JG7cEeuLf_2pkx4LSA _T3_7K27cEeuLf_2pkx4LSA"/>
+  <messageTypes xmi:id="_T3_UEm7cEeuLf_2pkx4LSA" name="message2" sender="_T3_UFW7cEeuLf_2pkx4LSA" receiver="_T3_UF27cEeuLf_2pkx4LSA" messages="_T3_7JW7cEeuLf_2pkx4LSA _T3_7KG7cEeuLf_2pkx4LSA"/>
+  <messageTypes xmi:id="_T3_UE27cEeuLf_2pkx4LSA" name="message3" sender="_T3_UFW7cEeuLf_2pkx4LSA" receiver="_T3_UF27cEeuLf_2pkx4LSA" messages="_T3_7IG7cEeuLf_2pkx4LSA _T3_7I27cEeuLf_2pkx4LSA _T3_7LW7cEeuLf_2pkx4LSA _T3_7Lm7cEeuLf_2pkx4LSA"/>
+  <messageTypes xmi:id="_T3_UFG7cEeuLf_2pkx4LSA" name="message4" sender="_T3_UFW7cEeuLf_2pkx4LSA" receiver="_T3_UFm7cEeuLf_2pkx4LSA" messages="_T3_7KW7cEeuLf_2pkx4LSA"/>
+  <objects xmi:id="_T3_UFW7cEeuLf_2pkx4LSA" name="mySenderObject" sent="_T3_UEW7cEeuLf_2pkx4LSA _T3_UEm7cEeuLf_2pkx4LSA _T3_UE27cEeuLf_2pkx4LSA _T3_UFG7cEeuLf_2pkx4LSA" type="_T3_UGG7cEeuLf_2pkx4LSA"/>
+  <objects xmi:id="_T3_UFm7cEeuLf_2pkx4LSA" name="myReceiverObject1" received="_T3_UEW7cEeuLf_2pkx4LSA _T3_UFG7cEeuLf_2pkx4LSA" type="_T3_UGW7cEeuLf_2pkx4LSA"/>
+  <objects xmi:id="_T3_UF27cEeuLf_2pkx4LSA" name="myReceiverObject2" received="_T3_UEm7cEeuLf_2pkx4LSA _T3_UE27cEeuLf_2pkx4LSA" type="_T3_UGm7cEeuLf_2pkx4LSA"/>
+  <classes xmi:id="_T3_UGG7cEeuLf_2pkx4LSA" name="MyClass" method="_T3_UG27cEeuLf_2pkx4LSA" objects="_T3_UFW7cEeuLf_2pkx4LSA"/>
+  <classes xmi:id="_T3_UGW7cEeuLf_2pkx4LSA" name="MyClass1" objects="_T3_UFm7cEeuLf_2pkx4LSA"/>
+  <classes xmi:id="_T3_UGm7cEeuLf_2pkx4LSA" name="MyClass2" objects="_T3_UF27cEeuLf_2pkx4LSA"/>
+  <method xmi:id="_T3_UG27cEeuLf_2pkx4LSA" name="myMethod" class="_T3_UGG7cEeuLf_2pkx4LSA">
+    <elements xsi:type="sMSS:Fragment" xmi:id="_T3_UHG7cEeuLf_2pkx4LSA">
+      <operands xmi:id="_T3_UHW7cEeuLf_2pkx4LSA" condition="myCondition1">
+        <messages xmi:id="_T3_7IG7cEeuLf_2pkx4LSA" type="_T3_UE27cEeuLf_2pkx4LSA"/>
+      </operands>
+      <operands xmi:id="_T3_7IW7cEeuLf_2pkx4LSA" condition="myCondition2">
+        <messages xmi:id="_T3_7Im7cEeuLf_2pkx4LSA" type="_T3_UEW7cEeuLf_2pkx4LSA"/>
+        <messages xmi:id="_T3_7I27cEeuLf_2pkx4LSA" type="_T3_UE27cEeuLf_2pkx4LSA"/>
+      </operands>
+    </elements>
+    <elements xsi:type="sMSS:Message" xmi:id="_T3_7JG7cEeuLf_2pkx4LSA" type="_T3_UEW7cEeuLf_2pkx4LSA"/>
+    <elements xsi:type="sMSS:Message" xmi:id="_T3_7JW7cEeuLf_2pkx4LSA" type="_T3_UEm7cEeuLf_2pkx4LSA"/>
+    <elements xsi:type="sMSS:Fragment" xmi:id="_T3_7Jm7cEeuLf_2pkx4LSA" type="PAR">
+      <operands xmi:id="_T3_7J27cEeuLf_2pkx4LSA" condition="">
+        <messages xmi:id="_T3_7KG7cEeuLf_2pkx4LSA" type="_T3_UEm7cEeuLf_2pkx4LSA"/>
+        <messages xmi:id="_T3_7KW7cEeuLf_2pkx4LSA" type="_T3_UFG7cEeuLf_2pkx4LSA"/>
+      </operands>
+      <operands xmi:id="_T3_7Km7cEeuLf_2pkx4LSA" condition="">
+        <messages xmi:id="_T3_7K27cEeuLf_2pkx4LSA" type="_T3_UEW7cEeuLf_2pkx4LSA"/>
+      </operands>
+      <operands xmi:id="_T3_7LG7cEeuLf_2pkx4LSA" condition="">
+        <messages xmi:id="_T3_7LW7cEeuLf_2pkx4LSA" type="_T3_UE27cEeuLf_2pkx4LSA"/>
+      </operands>
+    </elements>
+    <elements xsi:type="sMSS:Message" xmi:id="_T3_7Lm7cEeuLf_2pkx4LSA" type="_T3_UE27cEeuLf_2pkx4LSA"/>
+  </method>
+</sMSS:SMSS>
